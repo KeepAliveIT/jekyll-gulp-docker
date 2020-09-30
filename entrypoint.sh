@@ -3,6 +3,6 @@ set -e
 
 # Run on build
 bundle install --quiet
-npm ci
+npm install --save-dev --quiet
 
 exec "$@"
