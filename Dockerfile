@@ -7,7 +7,8 @@ MAINTAINER "Joel Murphy <joel@keepaliveit.co.uk>"
 # Clear existing entrypoint from parent image.
 ENTRYPOINT []
 
-RUN npm install --global gulp-cli
+RUN npm install --global gulp-cli --silent
+RUN chown -R jekyll /srv/
 
 WORKDIR /srv
 VOLUME /srv
