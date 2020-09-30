@@ -13,7 +13,7 @@ WORKDIR /srv
 VOLUME /srv
 
 RUN mkdir .jekyll-cache _site
-RUN chown -R jekyll .jekyll-cache/ && chown -R jekyll _site/
+RUN chown -R .jekyll-cache && chown -R _site
 
 ENV LC_ALL=C.UTF-8 \
     LANG=en_US.UTF-8 \
