@@ -9,7 +9,7 @@ ENTRYPOINT []
 
 RUN npm install --global gulp-cli --silent
 
-WORKDIR /srv
+WORKDIR /srv/jekyll
 VOLUME /srv
 
 RUN pwd
