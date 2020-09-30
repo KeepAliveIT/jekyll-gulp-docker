@@ -8,10 +8,12 @@ MAINTAINER "Joel Murphy <joel@keepaliveit.co.uk>"
 ENTRYPOINT []
 
 RUN npm install --global gulp-cli --silent
-RUN chown -R jekyll /srv/
 
 WORKDIR /srv
 VOLUME /srv
+
+RUN mkdir .jekyll-cache _site
+RUN chown -R jekyll /srv/.jekyll-cache/ && chown -R jekyll /srv/_site/
 
 ENV LC_ALL=C.UTF-8 \
     LANG=en_US.UTF-8 \
