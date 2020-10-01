@@ -5,6 +5,8 @@ set -e
 usermod -a -G jekyll root
 usermod -a -G root jekyll
 chmod a+rwx /srv/jekyll/
+mkdir _site/
+chmod a+rwx /srv/jekyll/_site
 bundle install --quiet
 npm install --save-dev --quiet
 
