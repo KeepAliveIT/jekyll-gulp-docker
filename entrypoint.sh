@@ -2,8 +2,8 @@
 set -e
 
 # Run on container launch to ensure we have a clean state of jekyll and node libraries.
-chown jekyll:jekyll -R /srv/jekyll
-chmod -R 777 /srv/jekyll
+usermod -a -G jekyll root
+usermod -a -G root jekyll
 bundle install --quiet
 npm install --save-dev --quiet
 
